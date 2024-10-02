@@ -1,0 +1,13 @@
+<div class="c-pageProductReviews_row g-outer-spacing-bottom-xxlarge"><div><div class="c-siteReview g-bg-gray10 u-grid g-outer-spacing-bottom-large"><div class="c-siteReview_main g-inner-spacing-medium"><div class="c-siteReviewHeader c-siteReviewHeader-user u-grid g-outer-spacing-bottom-medium u-flexbox-alignCenter"><div class="c-siteReviewHeader_reviewScore"><a><div data-v-e408cafe="" class="c-siteReviewScore_background c-siteReviewScore_background-user"><div data-v-e408cafe="" title="User score 9 out of 10" aria-label="User score 9 out of 10" class="c-siteReviewScore u-flexbox-column u-flexbox-alignCenter u-flexbox-justifyCenter g-text-bold c-siteReviewScore_green c-siteReviewScore_user g-color-gray90 c-siteReviewScore_small"><span data-v-e408cafe="">9</span></div></div></a></div> <a href="/user/johnhopkinsnoob/" class="c-siteReviewHeader_username g-text-bold g-color-gray90 g-text-link u-text-underline-under" title="johnhopkinsnoob">
+    johnhopkinsnoob
+  </a> <div class="c-siteReviewHeader_reviewDate g-color-gray80 u-text-uppercase">
+    Sep 28, 2024
+  </div></div> <div><div class="c-siteReview_quote g-outer-spacing-bottom-medium"><span>The good : Japanese vibes, character design is cool, the gameplay is fun, the ost has about 3-4 nice soundtracks.
+
+The bad: 1: performance on Switch, would be 10/10 otherwise.
+2: lack of intrusting side quests and world building, 
+3: unpolished game, it has some really excellent ideas but isn't good at executing them.
+
+Overall the game needed more development time and the switch version needs some major patches.</span></div> <!----> <!----></div></div> <div class="c-siteReview_extra u-grid u-grid-gap-medium g-inner-spacing-medium o-border-thin-top g-border-gray30 c-siteReview_extra-user"><!----> <div class="c-siteReview_externalLink g-color-gray80 u-flexbox u-flexbox-alignCenter c-siteReview_flag"><svg class="g-outer-spacing-right-small"><use xlink:href="#flag"></use></svg> <span class="g-text-link u-text-underline-under u-text-uppercase">Report</span></div> <!----> <div class="c-siteReview_platform g-text-bold g-color-gray80 g-text-xsmall u-text-right u-text-uppercase">
+      PlayStation 5
+    </div></div></div> <!----> <!----></div> <!----></div>
