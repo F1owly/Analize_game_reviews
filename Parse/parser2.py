@@ -70,6 +70,6 @@ def total_critics_form(base_dir: str):
                 df.to_csv(base_dir + "final_datasets/total_critics.csv", encoding="utf-8", index=False)
 
 
-# total_critics_form(base_dir)d
+total_critics_form(base_dir)
 df = pd.read_csv("../Parse/datasets/final_datasets/total_critics.csv")
 print(df.head(10))
