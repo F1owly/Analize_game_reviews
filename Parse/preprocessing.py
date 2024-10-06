@@ -46,6 +46,7 @@ def clear_review(path: str):
 
 
 # clear_review(total_critics_path)
+# clear_review("../Parse/datasets/final_datasets/total_critics_clear.csv")
 
 
 def tokenize_del_stop_words_stam_review(path: str):
@@ -55,12 +56,21 @@ def tokenize_del_stop_words_stam_review(path: str):
         lambda x: [word for word in x if not word in stopwords.words('english')])  # удаление шума (стоп-слов)
     stemmer = PorterStemmer()
     df['review'] = df['review'].apply(
-        lambda x: [stemmer.stem(word) for word in x])
+        lambda x: [stemmer.stem(word) for word in x]) #лемматизация
 
     df.to_csv(path, encoding="utf-8", index=False)
 
 
-tokenize_del_stop_words_stam_review(total_critics_path)
+# tokenize_del_stop_words_stam_review(total_critics_path)
+
+
+def del_non_informat(path):
+    df = pd.read_csv(path)
+    df = df.loc[(df['review'] != "['nan']")]
+    df.to_csv(path, encoding="utf-8", index=False)
+
+# del_non_informat(total_critics_path)
+
 
 df = pd.read_csv(total_critics_path)
 
