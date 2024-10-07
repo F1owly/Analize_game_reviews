@@ -24,6 +24,7 @@
 
 * Preprocess — предобработка данных
 * Algorithm — кластеризация и выделение сущностей
+
 Перед запуском последней части, необходимо будет сформировать эмбединги:
 ```python
 bg3 = Preprocess("Parse/datasets/final_datasets/bg3_critics_stemmed.csv")
