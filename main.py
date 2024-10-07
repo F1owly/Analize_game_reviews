@@ -1,8 +1,10 @@
 import pandas as pd
+import numpy as np
 import re
 
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from scipy.sparse import isspmatrix_csr, coo_array
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
 
 from transformers import BertModel, BertTokenizer
 
@@ -109,12 +111,37 @@ class Preprocess(object):
         else:
             self.df.to_csv(path + ".csv", encoding="utf-8", index=False)
 
+
 class Algorithm(object):
-    def __init__(self, path):
+    def __init__(self, path: str):
+        self.tensor = torch.load(path, weights_only=True).numpy()
+        self.result = None
+
+    def Kmeans(self, n_clusters=2):
+        kmeans = KMeans(n_clusters=n_clusters, random_state=0, n_init="auto").fit(self.tensor)
+        self.result = kmeans.labels_
+        return self.result
+
+    def Reduce_dim(self, n_components=15):
+        pca = PCA(n_components=15, random_state=42)
+        self.tensor = pca.fit_transform(self.tensor)
+        return self.result
+
+def relevant_reviws(classes: np.ndarray, game_id = 1, path = "Parse/datasets/final_datasets/total_critics.csv"):
+    df = pd.read_csv(path)
+    df = df.loc[df['game_id'] == game_id]
+
+    result = pd.DataFrame({})
+    result['review'] = df['review']
+    result['prior_mechanic'] = classes
+    return result
+
+embedings = Algorithm("Parse/datasets/final_datasets/bg3_critics_embeding_cls.pt")
+
+classes = embedings.Kmeans(3)
+
+print(relevant_reviws(classes))
 
 
-# bg3 = Preprocess("Parse/datasets/final_datasets/total_critics.csv", 1)
-#
-# bg3.bert_embedings(type='all')
-# bg3.save_csv("Parse/datasets/final_datasets/bg3_critics_embeding_all")
-# df = pd.read_csv("Parse/datasets/final_datasets/bg3_critics_tf_idf")
+
+
